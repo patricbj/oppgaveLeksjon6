@@ -1,0 +1,76 @@
+<!-- Prøvde meg på oppskriften som ble lagt ut, men fikk det ikke til å fungere.
+    Om bare det hadde blitt lagt ut tidligere så kunne jeg kanskje fått det til å fungere. Men men... -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Todo Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="leksjon2.css">
+        <script src="leksjon2.js"></script>
+    </head>
+    <body id="mainBody">
+        <header id="flex-header">
+            <div>
+                <h2 id="websiteProd">HIOF</h2>
+            </div>
+            <div>
+                <h2>User user</h2>
+            </div>
+        </header>
+        <main>
+            <div id="container">
+                <section id="addTodoButton">
+                    <div id="addTodoPlusSign">+</div>
+                    <div id="addTodoText">Todo</div>
+                </section>
+                <section id="todoItemBox">
+                </section>
+                <section id="todoListCompleted">
+                    <h3 id="headerTodoListCompleted">Completed todos</h3>
+                    <div id="todoListCheckbox">
+                        <input type="checkbox" id="dateFilterCheckbox"></input>
+                        <label for="dateFilterCheckbox" id="dateFilterText">Filter by date</label>
+                    </div>
+                    <table id="todoTable">
+                        <tr id="tableHeader">
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Description</th>
+                            <th>Completed date</th>
+                        </tr>
+                        <tr class="tableDataRow">
+                            <td>Todotitle</td>
+                            <td>Author Author</td>
+                            <td>I’m baby sriracha hot chicken …</td>
+                            <td>22.08.2020</td>
+                        </tr>
+                    </table>
+                </section>
+                <!-- Modal -->
+                <div id="myModal" class="modal">
+                    <div class="modal-body">
+                        <div id="modal-header">
+                            <h4>New todo</h4>
+                            <span class="close">&times;</span>
+                        </div>
+                        <div id="modal-main">
+                            <h5>Title</h5>
+                            <input id="modal-inputTitle" class="modal-input" name="Title" type="text" maxlength="30">
+                            <div id="inputDescriptionTitleBox">
+                                <h5 id="inputDescriptionTitle">Description</h5>
+                                <p id="remainingCharacters">(125 characters left)</p> 
+                            </div>
+                            <input type="text" id="modal-inputDescription" class="modal-input" name="Description" maxlength="125">
+                            <h5>Author</h5>
+                            <input id="modal-inputAuthor" class="modal-input" name="Author" type="text" maxLenght="30">
+                            <button id="modal-create">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
